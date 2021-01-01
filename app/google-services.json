@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "562700921851",
+    "project_id": "turkmenchat-f2ac0",
+    "storage_bucket": "turkmenchat-f2ac0.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:562700921851:android:351449b937acaabe6c395e",
+        "android_client_info": {
+          "package_name": "com.example.turkmenchat"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "562700921851-chh761fou5qu0rvvjmtke8o4lleij82k.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.turkmenchat",
+            "certificate_hash": "3dc2b13948b7c68c40ff82ebb9742c9862cb630a"
+          }
+        },
+        {
+          "client_id": "562700921851-ucf1mdctf4heh4b39af95m90qmmb9pfm.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAYd0CP5p9IGYIvV2jXpcNYh5Ji-PCdRTk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "562700921851-ucf1mdctf4heh4b39af95m90qmmb9pfm.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
