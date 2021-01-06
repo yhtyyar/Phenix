@@ -27,9 +27,9 @@ public class SignInActivity extends AppCompatActivity {
     private FirebaseAuth auth;
 
     private EditText emailEditText;
+    private EditText namedEditText;
     private EditText passwordEditText;
     private EditText repeatPasswordEditText;
-    private EditText namedEditText;
     private TextView toggleLoginSignUpTextView;
     private Button loginSignUpButton;
 
@@ -161,14 +161,14 @@ public class SignInActivity extends AppCompatActivity {
 
         if (loginModeActive) {
             loginModeActive = false;
-            loginSignUpButton.setText("Hasaba giriň  ");
+            loginSignUpButton.setText("Registrasiýa ediň  ");
             toggleLoginSignUpTextView.setText("ýa-da giriň");
             repeatPasswordEditText.setVisibility(View.VISIBLE);
 
         } else {
             loginModeActive = true;
             loginSignUpButton.setText("Giriň ");
-            toggleLoginSignUpTextView.setText("ýa-da hasaba giriň");
+            toggleLoginSignUpTextView.setText("ýa-da registrasiýa ediň");
             repeatPasswordEditText.setVisibility(View.GONE);
         }
 

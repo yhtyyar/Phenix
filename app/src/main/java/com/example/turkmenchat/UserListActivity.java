@@ -2,6 +2,7 @@ package com.example.turkmenchat;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -12,6 +13,7 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.ChildEventListener;
@@ -44,7 +46,6 @@ public class UserListActivity extends AppCompatActivity {
         if (intent != null) {
             userName = intent.getStringExtra(userName);
         }
-
 
         auth = FirebaseAuth.getInstance();
 
@@ -134,14 +135,21 @@ public class UserListActivity extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
 
-        switch (item.getItemId()) {
-            case R.id.sign_out:
-                FirebaseAuth.getInstance().signOut();
-                startActivity(new Intent(UserListActivity.this, SignInActivity.class));
-                return true;
-            default:
-                return super.onOptionsItemSelected(item);
+        int id = item.getItemId();
+        if (id ==R.id.profile) {
+            Intent openProfile = new Intent(this, UserProfileActivity.class);
+            startActivity(openProfile);
+            return true;
         }
+            switch (item.getItemId()) {
+                case R.id.sign_out:
+                    FirebaseAuth.getInstance().signOut();
+                    startActivity(new Intent(UserListActivity.this, SignInActivity.class));
+                    return true;
+                default:
+                    return super.onOptionsItemSelected(item);
+            }
+
 
     }
 }

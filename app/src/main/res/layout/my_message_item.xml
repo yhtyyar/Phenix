@@ -7,8 +7,9 @@
     <LinearLayout
         android:orientation="vertical"
         android:layout_alignParentEnd="true"
-        android:background="@drawable/my_message_bubble"
+        android:background="@drawable/my_messagee"
         android:paddingBottom="10dp"
+        android:layout_margin="5dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content">
 

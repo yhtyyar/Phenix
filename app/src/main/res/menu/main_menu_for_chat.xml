@@ -2,12 +2,6 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <item
-        android:id="@+id/profile"
-        android:title=""
-        android:orderInCategory="2"
-        app:showAsAction="always"
-        android:icon="@drawable/user_image" />
 
     <item
         android:id="@+id/sign_out"

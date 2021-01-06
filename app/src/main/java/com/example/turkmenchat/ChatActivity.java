@@ -2,7 +2,9 @@ package com.example.turkmenchat;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.NavUtils;
 
 import android.content.Intent;
 import android.net.Uri;
@@ -14,7 +16,6 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ListView;
@@ -75,8 +76,15 @@ public class ChatActivity extends AppCompatActivity {
             recipientUserId = intent.getStringExtra("recipientUserId");
             recipientUserName = intent.getStringExtra("recipientUserName");
         }
-        setTitle(recipientUserName + " bilen söhbetdeşlik");
+        setTitle(recipientUserName);
 
+
+
+        ActionBar actionBar = this.getSupportActionBar();
+        if(actionBar != null) {
+            actionBar.setDisplayHomeAsUpEnabled(true);
+
+        }
 
         database = FirebaseDatabase.getInstance();
         storage =FirebaseStorage.getInstance();
@@ -231,9 +239,10 @@ public class ChatActivity extends AppCompatActivity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater = getMenuInflater();
-        inflater.inflate(R.menu.main_menu,menu);
+        inflater.inflate(R.menu.main_menu_for_chat,menu);
         return true;
     }
+
 
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
@@ -245,8 +254,8 @@ public class ChatActivity extends AppCompatActivity {
                 return true;
             default:
                 return super.onOptionsItemSelected(item);
-        }
 
+        }
     }
 
     @Override
@@ -288,5 +297,11 @@ public class ChatActivity extends AppCompatActivity {
                 }
             });
         }
+
+
     }
+
+
+
+
 }

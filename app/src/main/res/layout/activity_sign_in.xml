@@ -13,7 +13,7 @@
         android:layout_height="150dp"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="8dp"
-        android:src="@drawable/logo"/>
+        android:src="@drawable/phenix_logo"/>
 
     <EditText
         android:id="@+id/emailEditText"
@@ -63,7 +63,7 @@
         android:id="@+id/loginSignUpButton"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="8dp"
-        android:text="Hasaba girmek"
+        android:text="Registrasiýa etmek"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         tools:ignore="HardcodedText" />
@@ -72,9 +72,11 @@
         android:id="@+id/toggleLoginSignUpTextView"
         android:text="Girmek üçin basyň"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="8dp"
-        android:textSize="16sp"
+        android:layout_marginTop="15dp"
+        android:textSize="18sp"
         android:clickable="true"
+        android:textStyle="bold"
+        android:textColor="@color/black"
         android:onClick="toggleLoginMode"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
